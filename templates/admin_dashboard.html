@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <form action="/search" method="GET">
+            <input type="text" name="search_query" placeholder="Search by name or department">
+            <button type="submit">Search</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Department</th>
+                    <th>Photo</th>
+                    <th>Feedback</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example: -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>1234567890</td>
+                    <td>Some address</td>
+                    <td>HR</td>
+                    <td><img src="/path/to/photo.jpg" alt="photo" width="50" height="50"></td>
+                    <td>Good</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
